@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATE & SHARE MUSIC!</title>
+    <style>
+        body {
+            font-weight: bolder;
+            font-size: 16px;
+            font-style: arial;
+            background-image: url(https://img.goodfon.com/wallpaper/big/9/9a/fon-temno-plastinka-vinil.webp);
+            background-attachment: fixed;
+            background-size: cover;
+            color: rgb(236, 253, 255);
+            padding: 20px;
+            text-align: center;
+            margin: 0;
+        }
+
+
+        .topnav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #55173b;
+            padding: 10px;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            padding: 10px;
+        }
+
+
+        .nav-links a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+
+        .search-bar {
+            padding: 6px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+
+        .form-container {
+            width: 40%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
+            margin: 10px 0;
+            padding: 15px;
+            font-size: 13px;
+            border-radius: 5px;
+            border: none;
+            text-align: center;
+        }
+
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+
+        .submit-btn {
+            background: #55173b;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 100px;
+        }
+
+
+        .submit-btn:hover {
+            background: #1e3855;
+        }
+
+
+        .table-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            background: #333;
+            color: white;
+            text-align: center;
+            margin-top: 0%;
+        }
+
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #444;
+        }
+
+
+        th {
+            background: #5c494f;
+        }
+
+
+        tr:hover {
+            background-color: #ffffff;
+        }
+        tr:hover td {
+            color: rgb(28, 209, 233);  
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0%;
+            margin-top: 0%;
+            background-color: #55173b;
+            background-position: 100px;
+        }
+        .facebook-link {
+            color: white;
+            text-transform: capitalize;
+            padding: 10px;
+        }
+
+
+        .footer-container .middle {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        .facebook-link:hover {
+            color: #a30f4d;
+        }
+
+
+        .PLAY-LIST {
+            margin-bottom: 10%;
+        }
+
+
+        .bordered-section,
+        .bordered-section1,
+        .bordered-section2 {
+            border-top: 2px solid #ffffff;
+            padding-top: 50px; margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header class="topnav">
+        <div class="nav-links">
+            <a href="#home">CREATE MUSIC</a>
+            <a href="#ADDSONG">ADD TO PLAYLIST</a>
+            <a href="#PLAYLIST">VIEW PLAYLIST</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+        <input type="text" class="search-bar" placeholder="MORE INFO...">
+    </header>
+
+
+    <main>
+        <h1>CREATE MUSIC</h1>
+        <form class="form-container" id="home">
+            <label>SONG TITLE:</label>
+            <input type="text" placeholder="Enter Song Title" required>
+
+
+            <label>SONG ARTIST:</label>
+            <input type="text" placeholder="Enter Artist Name" required>
+
+
+            <label>SELECT GENRE:</label>
+            <select required>
+                <option value="">Select Genre</option>
+                <option value="Pop">Pop</option>
+                <option value="Rock">Rock</option>
+                <option value="Hip-Hop">Hip-Hop</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Classical">Classical</option>
+                <option value="Metal">Metal</option>
+            </select>
+
+
+            <label>SONG LYRICS:</label>
+            <textarea placeholder="Enter your lyrics here..." required></textarea>
+
+
+            <button type="submit" class="submit-btn">CREATE MUSIC</button>
+        </form>
+
+
+        <div class="bordered-section" id="ADDSONG">
+            <h2>ADD SONG TO PLAYLIST</h2>
+            <form class="form-container">
+                <label>AUDIO LINK:</label>
+                <input type="text" placeholder="Enter URL" required>
+                <button type="submit" class="submit-btn">ADD TO PLAYLIST</button>
+            </form>
+        </div>
+
+
+        <div class="bordered-section1" id="PLAYLIST">
+            <h2 class="PLAY-LIST">YOUR PLAYLIST</h2>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>TITLE</th>
+                        <th>ARTIST</th>
+                        <th>GENRE</th>
+                        <th>AUDIO LINK</th>
+                    </tr>
+                    <tr>
+                        <td>711</td>
+                        <td>TONEEJAY</td>
+                        <td>POP</td>
+                        <td><a href="https://www.youtube.com/watch?v=CVDl47x5O9k" target="_blank">Listen Here</a></td>
+                    </tr>
+                    <tr>
+                        <td>Mahika</td>
+                        <td>Adie & Janine Berdin</td>
+                        <td>POP</td>
+                        <td><a href="https://www.youtube.com/watch?v=QjZATZn-O5U" target="_blank">Listen Here</a></td>
+                    </tr>
+                    <tr>
+                        <td>Tibok</td>
+                        <td>Earl Agustin</td>
+                        <td>POP</td>
+                        <td><a href="https://www.youtube.com/watch?v=piXX1YLtV1U" target="_blank">Listen Here</a></td>
+                    </tr>
+                    <tr>
+                        <td>Die With A Smile</td>
+                        <td>Lady Gaga, Bruno Mars</td>
+                        <td>POP/SOFT ROCK</td>
+                        <td><a href="https://www.youtube.com/watch?v=DuKghYhht8A" target="_blank">Listen Here</a></td>
+                    </tr>
+                    <tr>
+                        <td>Baby</td>
+                        <td>Justin Bieber ft. Ludacris</td>
+                        <td>ROCK</td>
+                        <td><a href="https://www.youtube.com/watch?v=kj4ZN8ySELk" target="_blank">Listen Here</a></td>
+                    </tr>
+                    <tr>
+                        <td>Shape of You</td>
+                        <td>Ed Sheeran</td>
+                        <td>POP</td>
+                        <td><a href="https://www.youtube.com/watch?v=CPX8rK3tRGQ" target="_blank">Listen Here</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+
+
+    <div class="bordered-section2">
+    </div>
+
+
+    <div class="footer-container" id="contact">
+        <a href="https://www.facebook.com/yourfacebookpage" class="facebook-link">FACEBOOK LINK</a>
+        <a href="https://www.instagram.com/yourinstagram" class="facebook-link middle">INSTAGRAM LINK</a>
+        <a href="https://www.youtube.com/yourchannel" class="facebook-link">YOUTUBE LINK</a>
+    </div>
+</body>
+</html>
